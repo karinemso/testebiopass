@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="elementId"></div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@biopassid/face-sdk/face-sdk.min.js"></script>
+<script>
+        const {takePicture} = faceSdk.camera();
+        async function handleTakePicture() {
+            const resp = await takePicture({
+                element: document.querySelector("#elementId"),
+            })
+        }
+        handleTakePicture();
+
+</script>
+</html>
